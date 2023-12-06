@@ -12,3 +12,5 @@ Paso 7: Cuando hayas hecho todo esto, presiona "ejecutar" y luego "recargar".
 Paso 8: Vuelve al laragon y luego presiona el boton menú, luego www, y por último Adivinar.
 Paso 9: Una vez hayas apretado el boton Adivinar te deberia abrir una pagina adivinar.test, en esta selecciona la opcion pagina_principal.html.
 Luego de todos estos pasos, vas a poder jugar a Adivinar sin problemas.
+
+Pequeña aclaración que no está de más: Yo estoy más enfocado en el backend, por lo que la pagina no va a contar con un diseño muy bonito o interactivo. El que avisa no traiciona.
