@@ -35,7 +35,7 @@
             <a href="/Adivina/pagina_puntos.php"><button class="btn btn-outline-info">Tabla de Puntos</button></a>
         </div>
     </nav>
-    <h1>Escojan un numero del 1 al 2</h1>
+    <h1>Escojan un numero del 1 al 10</h1>
     <h3 id="contenedorRondas">Ronda <?php echo $rondaEnJuego ?> </h3>
     <?php if($rondaEnJuego < $rondas){ ?>
 
