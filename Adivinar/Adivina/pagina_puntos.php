@@ -34,7 +34,7 @@
             <tbody>
                 <?php  foreach($ejecutar as $listado){ 
                     $nombre = $listado["nombre_jugador"];
-                    $puntos = $listado["SUM(puntos_jugador)"];
+                    $puntos = $listado["puntos_jugador"];
                 ?>
                 <tr class="table table-info">
                     <td><?php echo  $nombre ?></td>
