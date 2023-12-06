@@ -20,7 +20,7 @@
      require_once("C:\laragon\www\Adivinar\Clases\Parametros.php");
 
      $BD = new BD();
-     $numeroRandom = rand(1,2);
+     $numeroRandom = rand(1,10);
      ?> 
      <h1>El numero era <?php echo $numeroRandom ?></h1>
      <a href="/Adivina/pagina_adivina.php"><button>Volver al juego</button></a>
