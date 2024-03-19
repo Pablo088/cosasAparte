@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola</title>
+</head>
+<body>
+   
+    <div>
+        <label id="oficial" for="dolarOficial"></label>
+        <input type="checkbox" id="dolarOficial" value="" name="Dolar Oficial" class="check"><p></p>
+        
+        <label id="blue" for="dolarBlue"></label>
+        <input type="checkbox" id="dolarBlue" value="" name="Dolar Blue" class="check"><p></p>
+      
+        <label id="crypto" for="dolarCrypto"></label>
+        <input type="checkbox" id="dolarCrypto" value="" name="Dolar Crypto"  class="check"><p></p>  
+    </div>
+
+
+    <input type="number" id="montoPesos" placeholder="Monto en Pesos">
+    
+    <div id="conversion"></div>
+      
+    <button type="submit" onclick="convertir()">Enviar</button>
+
+    <script src="funcion.js"></script>
+</body>
+</html>
