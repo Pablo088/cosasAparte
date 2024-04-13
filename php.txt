@@ -1,0 +1,6 @@
+PHP/LARAVEL
+
+el metodo __invoke(){} solo se utiliza si el controlador que vas a utilizar, solo cuenta con un metodo
+Para pasarle variables a una vista (en un return view()) tenes que poner una coma luego de los parentesis del metodo view y abir corchetes
+(un array como le dicen los pibes). Dentro de ese array se van a almacenar todas las variables. Si le pasas un parametro al metodo en donde
+mostras la vista y queres definir su valor, vas a tener que utilizar una arrow function (=>) en donde: valorDelParametro => $parametro
