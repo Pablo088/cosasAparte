@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fium</title>
 </head>
+<script>
+            function confirmar(){
+                let respuesta = confirm("¿Queres borrrar este registro?");
+                if(respuesta == true){
+                    return true;
+                } else{
+                    return false;
+                }
+            }
+</script>
 <body>
     <h1>Hola</h1>
     
@@ -29,8 +39,13 @@
                         <th>{{$students->birthDate}}</th>
                         <th>{{$students->group}}</th>
                         <th><a href="{{route('student.edit',$students->id)}}"><button>Modificar</button></a></th>
-                        <th><button>Eliminar</button></th>
-                        <th></th>
+                        <th>
+                        <form action="{{route('student.destroy',$students->id)}}" method="post">
+                            @csrf  
+                            @method("delete")
+                            <button type="submit" id="botonEliminar" onclick="return confirmar()">Eliminar</button>
+                        </form>
+                        </th>
                     </tr>
                 @endforeach
                 </tbody>
