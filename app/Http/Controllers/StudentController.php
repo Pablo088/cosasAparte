@@ -16,6 +16,13 @@ class StudentController extends Controller
         return view("ABM.add");
     }
     public function add(Request $request){
+        $request->validate([
+            "dni"=>"required",
+            "name"=>"required",
+            "lastName"=>"required",
+            "birthDate"=>"required"
+        ]);
+        
         $student = new Student();
 
         $student->dni = $request->dni;
@@ -32,6 +39,13 @@ class StudentController extends Controller
         return view("ABM.edit", compact("student"));
     }
     public function update(Request $request,$student){
+        $request->validate([
+            "dni"=>"required",
+            "name"=>"required",
+            "lastName"=>"required",
+            "birthDate"=>"required"
+        ]);
+        
         $students = Student::find($student);
        
         $students->dni = $request->dni;
