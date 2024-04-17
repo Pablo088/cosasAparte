@@ -12,6 +12,21 @@ class StudentController extends Controller
         $student = Student::All();
         return view("student",compact("student"));
     }
+    public function new(){
+        return view("ABM.add");
+    }
+    public function add(Request $request){
+        $student = new Student();
+
+        $student->dni = $request->dni;
+        $student->name = $request->name;
+        $student->lastName = $request->lastName;
+        $student->birthDate = $request->birthDate;
+
+        $student->save();
+
+        return redirect()->route("student.new");
+    }
     public function edit($id){
         $student = Student::find($id);
         return view("ABM.edit", compact("student"));

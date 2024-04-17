@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fium</title>
+    <title>Alumnos</title>
 </head>
 <script>
             function confirmar(){
@@ -18,7 +18,7 @@
 <body>
     <h1>Hola</h1>
     
-       
+       <a href="{{route('student.new')}}"><button>Agregar Alumno</button></a>
         <div>
             <table>
                 <thead>

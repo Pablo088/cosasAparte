@@ -18,10 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("student",[StudentController::class, "index"])->name("student.index");
+Route::controller(StudentController::class)->group(function(){
+    Route::get("student","index")->name("student.index");
 
-Route::get("student/{id}/edit",[StudentController::class,"edit"])->name("student.edit");
-
-Route::put("student/{id}",[StudentController::class,"update"])->name("student.update");
-
-Route::delete("student/{id}",[StudentController::class,"destroy"])->name("student.destroy");
+    Route::get("student/new","new")->name("student.new");
+    
+    Route::post("student/new/add","add")->name("student.add");
+    
+    Route::get("student/{id}/edit","edit")->name("student.edit");
+    
+    Route::put("student/{id}","update")->name("student.update");
+    
+    Route::delete("student/{id}","destroy")->name("student.destroy");
+});
