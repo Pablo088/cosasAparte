@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1>Ingresa los datos del alumno que quieras agregar</h1>
+    <div>
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
     <form action="{{route('student.add')}}" method="post">
         @csrf
         <input type="number" name="dni" placeholder="DNI" value="{{old('dni')}}">
